@@ -1,0 +1,28 @@
+name: deep_learning_v3
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - keras>=3.0.0
+      - keras-hub
+      - keras-tuner
+      - kagglehub
+      - tensorflow
+      - torch
+      - torchvision
+      - jax[cpu]
+      - numpy
+      - matplotlib
+      - pandas
+      - regex
+      - ipython
+      - pillow
+      - scipy
+      - pydot
+      - graphviz
+      - tqdm
+      - jupyter
+      - notebook

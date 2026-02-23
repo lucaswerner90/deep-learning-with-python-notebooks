@@ -10,10 +10,30 @@ For readability, these notebooks only contain runnable code blocks and section t
 ## Running the code
 
 We recommend running these notebooks on [Colab](https://colab.google), which
-provides a hosted runtime with all the dependencies you will need. You can also,
-run these notebooks locally, either by setting up your own Jupyter environment,
-or using Colab's instructions for
-[running locally](https://research.google.com/colaboratory/local-runtimes.html).
+provides a hosted runtime with all the dependencies you will need.
+
+Alternatively, you can run these notebooks locally using **Docker**, which ensures a consistent environment with all necessary dependencies (including Graphviz for model visualization) pre-installed.
+
+### Running with Docker
+
+1. **Build the image**:
+   ```bash
+   docker build -t deep-learning-v3 .
+   ```
+
+2. **Run the container**:
+   ```bash
+   docker run -it --rm \
+       -p 8888:8888 \
+       -v "$(pwd)":/app \
+       deep-learning-v3
+   ```
+
+3. **Access the notebooks**:
+   Once the container starts, copy the URL provided in the terminal (starting with `http://127.0.0.1:8888/?token=...`) and paste it into your browser.
+
+**Note for Apple Silicon (M1/M2/M3) users**:
+The current Docker setup runs on the CPU backend by default. For hardware-accelerated training on Mac, we recommend using the local `conda` environment setup described in the setup instructions or running directly on Colab.
 
 By default, all notebooks will run on Colab's free tier GPU runtime, which
 is sufficient to run all code in this book. Chapter 8-18 chapters will benefit
