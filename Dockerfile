@@ -1,9 +1,7 @@
 # Use an official Python runtime as a parent image
-FROM python:3.10-slim
+FROM python:3.10
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+# Set the backend to JAX.
 ENV KERAS_BACKEND=jax
 
 # Install system dependencies

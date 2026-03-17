@@ -2,9 +2,7 @@ keras>=3.0.0
 keras-hub
 keras-tuner
 kagglehub
-tensorflow
-torch
-torchvision
+tensorflow-cpu
 jax[cpu]
 numpy
 matplotlib
